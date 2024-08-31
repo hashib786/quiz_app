@@ -23,7 +23,15 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-          OutlinedButton(onPressed: () => {}, child: const Text('Start')),
+          OutlinedButton(
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () => {
+              print("Something Happend"),
+            },
+            child: const Text('Start'),
+          ),
         ],
       ),
     );
