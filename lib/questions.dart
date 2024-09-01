@@ -10,6 +10,33 @@ class Questions extends StatefulWidget {
 class _QuestionsState extends State<Questions> {
   @override
   Widget build(context) {
-    return const Text("some Questions data");
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text("Your Question"),
+          const SizedBox(
+            height: 32,
+          ),
+          ElevatedButton(
+            onPressed: () => {},
+            child: const Text("answer 1"),
+          ),
+          ElevatedButton(
+            onPressed: () => {},
+            child: const Text("answer 1"),
+          ),
+          ElevatedButton(
+            onPressed: () => {},
+            child: const Text("answer 1"),
+          ),
+          ElevatedButton(
+            onPressed: () => {},
+            child: const Text("answer 1"),
+          ),
+        ],
+      ),
+    );
   }
 }
