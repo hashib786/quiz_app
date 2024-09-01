@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/questions.dart';
 import 'package:quiz_app/start_screen.dart';
 
 class Quiz extends StatefulWidget {
@@ -9,6 +10,10 @@ class Quiz extends StatefulWidget {
 }
 
 class _Quiz extends State<Quiz> {
+  Widget activeScreen = const StartScreen();
+
+  void handleStartQuiz() => {setState(() => activeScreen = const Questions())};
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,11 +21,12 @@ class _Quiz extends State<Quiz> {
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-                colors: [Colors.indigo, Colors.indigoAccent],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight),
+              colors: [Colors.indigo, Colors.indigoAccent],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
           ),
-          child: const StartScreen(),
+          child: activeScreen,
         ),
       ),
     );
