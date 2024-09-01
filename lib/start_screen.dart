@@ -9,7 +9,11 @@ class StartScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset("assets/images/quiz-logo.png"),
+          Image.asset(
+            "assets/images/quiz-logo.png",
+            width: 300,
+            color: const Color.fromARGB(160, 255, 255, 255),
+          ),
           const SizedBox(
             height: 38,
           ),
@@ -23,14 +27,15 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 22,
           ),
-          OutlinedButton(
+          OutlinedButton.icon(
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
             ),
             onPressed: () => {
               print("Something Happend"),
             },
-            child: const Text('Start'),
+            icon: const Icon(Icons.arrow_right_alt_rounded),
+            label: const Text('Start'),
           ),
         ],
       ),
