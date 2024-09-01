@@ -10,7 +10,15 @@ class Quiz extends StatefulWidget {
 }
 
 class _Quiz extends State<Quiz> {
-  Widget activeScreen = const StartScreen();
+  Widget? activeScreen;
+
+  @override
+  void initState() {
+    activeScreen = StartScreen(
+      handleStartQuiz: handleStartQuiz,
+    );
+    super.initState();
+  }
 
   void handleStartQuiz() => {setState(() => activeScreen = const Questions())};
 
